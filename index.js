@@ -13,6 +13,8 @@ nunjucks.configure('views', {
 // Routes
 app.get('/', function(req, res) {
 	
+	// Read from JSON file
+	
 	var JSONobj;
 	
 	fs.readFile('json/sample.json', 'utf8', function (err, data) {
@@ -20,6 +22,8 @@ app.get('/', function(req, res) {
 	  if (err) throw err;
 	  
 	  JSONobj = JSON.parse(data);
+	  
+	  // Render Nunjucks template and pass JSON
 	  
 	  res.render('./index.html', {
 		items : JSONobj
