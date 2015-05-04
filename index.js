@@ -3,7 +3,6 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var JSONStream = require('JSONStream');
 var nunjucks = require('nunjucks');
 
 nunjucks.configure('views', {
