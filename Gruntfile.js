@@ -9,9 +9,11 @@
 'use strict';
 
 module.exports = function(grunt) {
+	
 	pkg: grunt.file.readJSON('package.json'),
 
 	grunt.initConfig({
+		
 		csv2json: {
 			options: {
 				inputFilePath: 'csv',
@@ -75,7 +77,7 @@ module.exports = function(grunt) {
 				tasks: ['jshint', 'uglify', 'notify:uglify']
 			},
 			images: {
-				files: ['public/src/img/*.{png,jpg,gif,svg}'],
+				files: ['public/src/img/**'],
 				tasks: ['imagemin', 'notify:imagemin']
 			}
 		},
